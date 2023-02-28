@@ -1,4 +1,4 @@
-# Balance checker for voip.ms at Groundwire iOS app
+# Balance checker for voip.ms at Acrobits Groundwire iOS app
 
 Docker container to expose [voip.ms](voip.ms) API in [Groundwire format](https://doc.acrobits.net/api/client/balance_checker.html). Build it as a side project to practice knowledge in Github, Node, Express, Docker, Trivy Docker scan, etc. If you see any opportunity for optimization - pull requests are welcome.
 
