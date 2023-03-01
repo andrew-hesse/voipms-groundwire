@@ -17,7 +17,7 @@ Docker container to expose [voip.ms](voip.ms) API in [Groundwire format](https:/
 Deploy docker container. <br>
 Enviroment variables `USERNAME` and `PASSWORD` are required. <br>
 `USERNAME` is your voip.ms login email and `PASSWORD` is API password that you configured at previous step. <br>
-`CURRENCY` variable will be `CAD` by default.
+`CURRENCY` is currency name that you will see in iOS app. Cosmetic and doesn't impact anything. Variable is optional and will be `CAD` by default.
 
 ## Groundwire iOS App
 
@@ -39,7 +39,6 @@ Method: `Get`
       - USERNAME=andrew@mail.org    # required, voip.ms login email
       - PASSWORD=MyApiPassword123   # required, voip.ms API password
       - CURRENCY=CAD                # optional, CAD by default
-      - PORT=3000                   # optional, 3000 by default
 
 ```
 
