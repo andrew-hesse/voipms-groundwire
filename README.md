@@ -25,8 +25,10 @@ Configure in Groundwire settings
 
 `Settings -> Select voip.ms number -> Advanced Settings -> Web Services -> Balance Checker`
 
-URL: `URL of your docker container` <br>
-Method: `Get`
+*Note: Docker container is available via port 3000* <br>
+URL: `URL of your docker container :3000` <br> (for example via IP http://52.12.23.1:3000 or URL http://app.example:com:3000) <br>
+Method: `Get` <br>
+
 
 ## Docker Compose
 
@@ -35,6 +37,8 @@ Method: `Get`
     image: ghcr.io/acheremisov/voipms-groundwire:v.1
     container_name: groundwire
     restart: unless-stopped
+    ports:
+      - "3000:3000"
     environment:
       - USERNAME=andrew@mail.org    # required, voip.ms login email
       - PASSWORD=MyApiPassword123   # required, voip.ms API password
