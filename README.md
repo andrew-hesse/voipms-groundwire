@@ -2,7 +2,20 @@
 
 Docker container to expose [voip.ms](voip.ms) API in [Groundwire format](https://doc.acrobits.net/api/client/balance_checker.html). Build it as a side project to practice knowledge in Github, Node, Express, Docker, Trivy Docker scan, etc. If you see any opportunity for optimization - pull requests are welcome.
 
-![This is an image](/pictures/diagram.png)
+```mermaid
+sequenceDiagram
+    participant GA as Groundwire App
+    participant D as voipms-Groundwire @ Docker
+    participant A as voip.ms API
+    GA->>D: Check balance
+    Note over D: Authenticate <br/> against voip.ms API
+    D->>A: Issue API call to voip.ms
+    Activate A
+    A->>D: Return balance as float (12.123432)
+    Deactivate A
+    Note over D: Process number and add currency
+    D->>GA: Return formatted balance
+```
 
 # Deployment
 
@@ -25,10 +38,9 @@ Configure in Groundwire settings
 
 `Settings -> Select voip.ms number -> Advanced Settings -> Web Services -> Balance Checker`
 
-*Note: Docker container is available via port 3000* <br>
+_Note: Docker container is available via port 3000_ <br>
 URL: `URL of your docker container :3000` <br> (for example via IP http://52.12.23.1:3000 or URL http://app.example:com:3000) <br>
 Method: `Get` <br>
-
 
 ## Docker Compose
 
