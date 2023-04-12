@@ -9,13 +9,6 @@ on:
       - ".github/**"
       - "pictures/**"
       - "*.md"
-  pull_request:
-    branches:
-      - "main"
-    paths-ignore:
-      - ".github/**"
-      - "pictures/**"
-      - "*.md"
 
 jobs:
   docker:
