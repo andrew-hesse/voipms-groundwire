@@ -1,4 +1,4 @@
-## ‼️ Archived and updated to [Cloudflare Worker Git repo](https://github.com/acheremisov/voipms-groudwire-cloudflare-worker)
+###  Serverless version is at [Cloudflare Worker Git repo](https://github.com/acheremisov/voipms-groudwire-cloudflare-worker)
 
 # Balance checker for voip.ms at Acrobits Groundwire iOS app
 
